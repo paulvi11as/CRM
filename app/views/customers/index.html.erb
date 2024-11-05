@@ -1,4 +1,12 @@
-<h1>All Customers</h1>
-<%= render @customers %>
-<%= link_to "Alphabetized", customers_alphabetized_path %> |
-<%= link_to "Missing Email", customers_missing_email_path %>
+<div class="container mx-auto px-4">
+  <h1 class="mb-4 text-center">All Customers</h1>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+    <%= render @customers %>
+  </div>
+
+  <div class="mb-4 text-center">
+    <%= link_to "Alphabetized", customers_alphabetized_path, class: "btn btn-success" %>
+    <%= link_to "Missing Email", customers_missing_email_path, class: "btn btn-warning" %>
+  </div>
+</div>

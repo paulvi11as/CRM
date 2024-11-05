@@ -1,7 +1,11 @@
-<div class="customer-card">
-  <%= image_tag customer.image, size: "100x100" if customer.image.attached? %>
-  <p><strong>Full Name:</strong> <%= customer.full_name %></p>
-  <p><strong>Phone:</strong> <%= customer.phone_number %></p>
-  <p><strong>Email:</strong> <%= customer.email || "N/A" %></p>
-  <p><strong>Notes:</strong> <%= customer.notes %></p>
+<div class="col">
+  <div class="card shadow-sm">
+    <%= image_tag customer.image, class: "card-img-top", size: "200x200" if customer.image.attached? %>
+    <div class="card-body">
+      <h2 class="card-title"><strong><%= customer.full_name %></strong></h2>
+      <p class="card-text"><strong>Phone:</strong> <%= customer.phone_number %></p>
+      <p class="card-text"><strong>Email:</strong> <%= customer.email %></p>
+      <p class="card-text"><strong>Notes:</strong> <%= customer.notes || "N/A" %></p>
+    </div>
+  </div>
 </div>
